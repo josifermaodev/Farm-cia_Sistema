@@ -52,7 +52,7 @@ export class ProdutosController implements ProdutosRepository {
     deletar(numero: number): void {
         const buscaProduto = this.buscarNoArray(numero);
 
-        if(buscaProduto!== null) {
+        if(buscaProduto !== null) {
             this.listaProdutos.splice(this.listaProdutos.indexOf(buscaProduto), 1);
             console.log("O produto foi deletado com sucesso!");
         } else {
