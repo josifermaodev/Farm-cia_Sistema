@@ -1,8 +1,8 @@
 import readlineSync from 'readline-sync';
 import { colors } from './src/util/Colors';
-import { ProdutosController } from './controller/ProdutosController';
+import { ProdutosController } from './src/controller/ProdutosController';
 import { Medicamentos } from './src/model/Medicamentos';
-import { Consmeticos } from './src/model/Cosmeticos';
+import { Cosmeticos } from './src/model/Cosmeticos';
 
 export function main(){
 
@@ -17,8 +17,8 @@ export function main(){
     produto.cadastrar(new Medicamentos(produto.gerarId(), 'Dipirona', 1, 29.90, 15, 'Analgesico'));
 
      // Novas Instâncias da Classe Cosmeticos
-    produto.cadastrar(new Consmeticos(produto.gerarId(), 'Asad', 2, 254.90, 12, 'Perfume'));
-    produto.cadastrar(new Consmeticos(produto.gerarId(), 'Yara', 2, 189.50, 25, 'Perfume'));
+    produto.cadastrar(new Cosmeticos(produto.gerarId(), 'Asad', 2, 254.90, 12, 'Perfume'));
+    produto.cadastrar(new Cosmeticos(produto.gerarId(), 'Yara', 2, 189.50, 25, 'Perfume'));
 
     let continuar = true;
     while(continuar){
@@ -77,7 +77,7 @@ export function main(){
                         // Criar Cosmetico
                         console.log("Digite o seguimento do cosmetico: ");
                         fragrancia = readlineSync.question('');
-                        produto.cadastrar(new Consmeticos(produto.gerarId(), nome, tipo, valor, estoque, fragrancia));
+                        produto.cadastrar(new Cosmeticos(produto.gerarId(), nome, tipo, valor, estoque, fragrancia));
 
                         break;
                     default:
@@ -136,7 +136,7 @@ export function main(){
                             // Atualizar Cosmetico
                             console.log("Digite o novo seguimento do cosmetico: ");
                             fragrancia = readlineSync.question('');
-                            produto.atualizar(new Consmeticos(id, nome, tipo, valor, estoque, fragrancia));
+                            produto.atualizar(new Cosmeticos(id, nome, tipo, valor, estoque, fragrancia));
                             break;
                     } 
                 }else {

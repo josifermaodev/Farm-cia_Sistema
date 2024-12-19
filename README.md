@@ -14,7 +14,7 @@ O sistema permite cadastrar, listar, consultar, atualizar e deletar produtos, co
 - **Atualização de Produtos**: Edita as informações de um produto existente.
 - **Exclusão de Produtos**: Remove um produto do sistema.
 - **Categorias**:
-    - **Medicamentos**: Incluem o atributo `genérico` (booleano).
+    - **Medicamentos**: Incluem o atributo `genérico` (string).
     - **Cosméticos**: Incluem o atributo `fragrância` (string).
 
 ---
@@ -100,7 +100,7 @@ src/
     Qual o segmento do medicamento: Analgésico
     Produto "Paracetamol" adicionado com sucesso!
 
-3. *Listar Produtos*:
+3. *Lista Produtos*:
     Escolha a opção 2 e veja os produtos cadastrados:
       [{ "id": 1, "nome": "Paracetamol", "preco": 15.5, "generico": true }]
 

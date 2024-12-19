@@ -1,5 +1,5 @@
 import { ProdutosRepository } from "../repository/ProdutosRepository";
-import { Produtos } from "../src/model/Produtos";
+import { Produtos } from "../model/Produtos";
 
 
 export class ProdutosController implements ProdutosRepository {
@@ -25,8 +25,8 @@ export class ProdutosController implements ProdutosRepository {
     }
 
 
-    procurarPorId(numero: number): void {
-        const buscaId = this.buscarNoArray(numero);
+    procurarPorId(id: number): void {
+        const buscaId = this.buscarNoArray(id);
 
         if (buscaId){
             console.log("Produto encontrado:");
@@ -49,8 +49,8 @@ export class ProdutosController implements ProdutosRepository {
     }
 
 
-    deletar(numero: number): void {
-        const buscaProduto = this.buscarNoArray(numero);
+    deletar(id: number): void {
+        const buscaProduto = this.buscarNoArray(id);
 
         if(buscaProduto !== null) {
             this.listaProdutos.splice(this.listaProdutos.indexOf(buscaProduto), 1);
@@ -65,9 +65,9 @@ export class ProdutosController implements ProdutosRepository {
         return ++this.id;
     }
 
-    public buscarNoArray(numero: number): Produtos | null {
+    public buscarNoArray(id: number): Produtos | null {
         for (let produtos of this.listaProdutos){
-            if (produtos.id === numero){
+            if (produtos.id === id){
                 return produtos;
             }
         }

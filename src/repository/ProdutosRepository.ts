@@ -1,4 +1,4 @@
-import { Produtos } from "../src/model/Produtos";
+import { Produtos } from "../model/Produtos";
 
 
 export interface ProdutosRepository{
